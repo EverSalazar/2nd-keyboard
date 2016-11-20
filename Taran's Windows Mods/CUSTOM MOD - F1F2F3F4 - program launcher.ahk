@@ -64,12 +64,12 @@ Return
 
 
 F2::
-IfWinNotExist, ahk_class Chrome_WidgetWin_1
-	Run, chrome.exe
-if WinActive("ahk_class Chrome_WidgetWin_1")
+IfWinNotExist, ahk_exe chrome.exe
+	Run, chrome.exe	
+if WinActive("ahk_exe chrome.exe")
 	Send ^{tab}
 else
-	WinActivate ahk_class Chrome_WidgetWin_1
+	WinActivate ahk_exe chrome.exe
 Return
 
 
